@@ -1,0 +1,15 @@
+morphlines : [ 
+  {
+    id : parser
+    importCommands : ["org.kitesdk.**"]
+    commands : [
+      ## Add the Headers to set vendor and subtype
+      {
+        setValues {          HEADER_vendor: "cisco"
+          HEADER_devicetype: "SOME TYPE HERE"
+          HEADER_devicemodel: "SOME MODEL HERE"
+        }
+      }
+    ]
+  }
+]
